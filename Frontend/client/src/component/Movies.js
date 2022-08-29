@@ -15,7 +15,7 @@ export default class Movies extends Component {
             boxShadow: "5px 5px 5px white",
           }}
         >
-          {this.props.movies.map((movie) => {
+          {this.props.movies !== [{ "error": "No movies found" }] && this.props.movies.map((movie) => {
             return (
               <Carousel.Item key={movie.id}>
                 <Card
