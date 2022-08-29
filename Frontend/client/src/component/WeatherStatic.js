@@ -9,7 +9,7 @@ export default class WeatherStatic extends Component {
             <>
               <Card style={{ width: "18rem" }}>
                 <Card.Body>
-                  <Card.Title></Card.Title>
+                  <Card.Title>{this.props.city}</Card.Title>
                   <Card.Subtitle className="mb-2 text-muted">
                     {day.date}
                   </Card.Subtitle>
