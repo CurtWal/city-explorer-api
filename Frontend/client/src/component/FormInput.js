@@ -49,14 +49,14 @@ export default class FormInput extends Component {
   handleWeather = async (city, lon, lat) => {
     const weather = await axios
       .get(
-        `http://localhost:3002/weather?lat=${lat}&lon=${lon}&key=${process.env.REACT_APP_KEY}`
+        `${process.env.REACT_APP_URL_KEY}/weather?lat=${lat}&lon=${lon}&key=${process.env.REACT_APP_KEY}`
       )
       .catch((err) => console.log("error with location", err));
     this.setState({ weatherData: weather.data });
     // console.log(this.state.weatherData);
 
     const movie = await axios
-      .get(`http://localhost:3002/movie?city=${city}`)
+      .get(`${process.env.REACT_APP_URL_KEY}/movie?city=${city}`)
       .catch((err) => console.log("error with films", err));
     this.setState({ movies: movie.data });
     // console.log(this.state.movies);
