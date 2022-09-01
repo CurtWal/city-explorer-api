@@ -11,6 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-body{
+.maps{
+  margin-left: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 3px white;
+}
+
+div{
+  background-color: black;
+}
+div.card-body{
+  background-color: grey;
+}
+div.card-title.h5{
+  color: white;
+  background-color: grey;
+}
+div.card-subtitle.h6{
+  background-color: grey;
+}
+div.carousel-indicators{
+  background-color: grey;
+}
+html{
   background-color: black;
 }

@@ -4,20 +4,24 @@ require("dotenv").config();
 const express = require("express");
 const port = process.env.PORT || 3003;
 const getMovie = require("./router/movies")
+const weather = require("./router/weather")
 const app = express();
 // const weatherData = require("./data/weather.json");
-const getWeather = require("./router/weather")
+
 
 
 
 const cors = require("cors");
-const axios = require("axios");
+// const axios = require("axios");
 
 app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Welcome");
 });
+
+app.use(weather)
+app.use(getMovie);
 
 // ----------------------------------------------------------------
 //  Lab 07
@@ -82,8 +86,8 @@ app.get("/", (req, res) => {
 // ---------------------------------------------------------------------------------------------------
 
 //  Lab 09
-app.use("/weather", getWeather);
-app.use("/movie", getMovie);
+// app.use("/weather", getWeather);
+// app.use("/movie", getMovie);
 
 
 
